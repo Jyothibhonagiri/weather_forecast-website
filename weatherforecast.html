@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather forecast app</title>
+    <style>
+         
+        body{
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzVLHC6qC_nuXQVpXTlIWR-SyRExZZEB8VXw&usqp=CAU);
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .menu{
+            width:100%;
+            height: 60px;
+            border-radius: 20px;
+            background-color: rgb(145, 170, 56);
+            padding: 20px;
+            box-shadow: 2px 2px 2px rgb(167, 5, 32);
+        }
+         ul>li{
+          display: inline-block;
+          padding: 20px;
+         
+
+         }
+         .button{
+           width:200px;
+           height: 40px;
+           background-color: lightsalmon;
+           border-radius: 10px;
+           border: none;
+           box-shadow: 2px 2px black;
+           
+         }
+        .content{
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background-color: rgb(173, 210, 233);
+            height: 70vh;
+            width:700px;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            text-align: center;
+            text-shadow: 2px 2px purple;
+        }
+        h1:hover{
+            color:navy;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .parent{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 20px;
+        }
+        #cloudy{
+            height:70px;
+            width:60px;
+        }
+        .child{
+            display: grid;
+            padding-left: 20px;
+            grid-template-columns:auto auto auto auto auto ;
+            grid-template-rows:auto auto auto ;
+            row-gap: 10px;
+            margin-top: 10%;
+        }
+        img{
+            height:40px;
+            width:30px;
+            box-shadow: 2px 2px 2px 2px blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+        <nav>
+        <ul > 
+         <li ><a href="#" style="color:maroon;">Home</a></li>
+           <li > <a href="#"style="color:maroon;" >Forecast</a></li>
+           <li > <a href="#"style="color:maroon;" >Quick look</a></li>
+           <li > <a href="#"  style="color:maroon;">Hour-by-hour</a></li>
+           <button class="button">search</button>
+        </ul>
+        </nav>
+    </div>
+        <div class="content">
+            <h1>HYDERABAD</h1>
+            <div class="parent">
+                <div><img src="cloudy image.jpg" id="cloudy"><br>partly cloudy</div>
+                <h2> 21.0 <sup>o</sup>C</h2>
+                <h3> wind:6.1 kmph<br>precip:0.00mm<br>pressure:1025.0mb</h3>
+            </div>
+            <div class="child">
+                <div>MON</div>
+                <div>TUE</div>
+                <div>WED</div>
+                <div>THU</div>
+                <div>FRI</div>
+                <div><img src="cloudy image.jpg"/></div>
+                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKJpr-HiEP3LlSiZ1--zFEyFkm-Fdxvw-tcg&usqp=CAU"/></div>
+                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGfnhKK_kHUp_E_xGbYRvrB6M9vyV5J1HmNw&usqp=CAU"/></div>
+                <div><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWOPHGMBaD1NdukpJ7KLeQy2o-6eV_HScriA&usqp=CAU"/></div>
+                <div><img src="data:image/png;base64,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"/></div>
+                <div>21.0<sup>o</sup>c</div>
+                <div>31.3<sup>o</sup>c</div>
+                <div>27.8<sup>o</sup>c</div>
+                <div>23.3<sup>o</sup>c</div>
+                <div>17.0<sup>o</sup>c</div>
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        window.confirm("Do you want to open weather forecast app");
+    </script>
+</body>
+</html>
